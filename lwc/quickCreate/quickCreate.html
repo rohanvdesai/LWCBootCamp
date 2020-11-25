@@ -1,0 +1,42 @@
+<template>
+    <lightning-accordion>
+        <lightning-accordion-section name="A" label="Account">
+            <lightning-record-edit-form object-api-name="Account" onsuccess={handleSuccess}>
+                <lightning-messages></lightning-messages>
+                <div class="slds-m-around_medium">
+                    <lightning-input-field field-name='Name'></lightning-input-field>
+                    <lightning-input-field field-name='Industry'></lightning-input-field>
+                    <lightning-input-field field-name='Phone'></lightning-input-field>
+                    <div class="slds-m-top_medium">
+                        <lightning-button variant="brand" type="submit" label="Create Account">
+                        </lightning-button>
+                    </div>
+                </div>
+            </lightning-record-edit-form>
+        </lightning-accordion-section>
+    </lightning-accordion>
+    <lightning-accordion>
+        <lightning-accordion-section name="C" label="Contact">
+            <lightning-record-edit-form object-api-name="Contact" onsuccess={handleSuccess}>
+                <lightning-messages></lightning-messages>
+                <lightning-input-field field-name='FirstName'></lightning-input-field>
+                <lightning-input-field field-name='LastName'></lightning-input-field>
+                <lightning-input-field field-name='Email'></lightning-input-field>
+                <lightning-button class="slds-m-top_medium" variant="brand" type="submit" label="Create Contact">
+                </lightning-button>
+            </lightning-record-edit-form>
+        </lightning-accordion-section>
+    </lightning-accordion>
+    <lightning-accordion>
+        <lightning-accordion-section name="O" label="Opportunity">
+            <lightning-record-edit-form object-api-name="Opportunity" onsuccess={handleSuccess}>
+                <lightning-messages></lightning-messages>
+                <lightning-input-field field-name='Name'></lightning-input-field>
+                <lightning-input-field field-name='StageName'></lightning-input-field>
+                <lightning-input-field field-name='CloseDate'></lightning-input-field>
+                <lightning-button class="slds-m-top_medium" variant="brand" type="submit" label="Create Opportunity">
+                </lightning-button>
+            </lightning-record-edit-form>
+        </lightning-accordion-section>
+    </lightning-accordion>
+</template>
