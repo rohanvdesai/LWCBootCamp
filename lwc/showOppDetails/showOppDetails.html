@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Opportunity Details" icon-name="standard:opportunity">
+        <template if:true={record}>
+            <div class="slds-m-around_medium">
+                <p>{name}</p>
+                <p>{stage}</p>
+                <p>{closeDate}</p>
+            </div>
+        </template>
+        <template if:true={error}>
+            {error}
+        </template>
+    </lightning-card>
+</template>
